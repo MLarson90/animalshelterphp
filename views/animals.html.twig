@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>View Animals</title>
+  </head>
+  <body>
+    <div class='container'>
+      {% if steve is not empty %}
+        <h1>Animals that have been sent to D.I.E</h1>
+          <div class="row">
+            {% for steves in steve %}
+              <div class="col-lg-4">
+                <ul>
+                  <li>Name: {{ steves.getName }}</li>
+                  <li>Breed: {{ steves.getBreed }}</li>
+                  <li>Gender: {{ steves.getGender }}</li>
+                  <li>When {{ steves.getName }} came to D.I.E: {{ steves.getDate }}</li>
+                </ul>
+              </div>
+            {% endfor %}
+        </div>
+      {% endif %}
+        <p><a href='/'>Home</a></p>
+    </div>
+  </body>
+</html>

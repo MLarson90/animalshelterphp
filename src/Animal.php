@@ -33,8 +33,9 @@
         $name = $animal['name'];
         $gender = $animal['gender'];
         $breed = $animal['breed'];
+        $date_admitted = $animal['date_admitted'];
         $id = $animal['id'];
-        $new_animal = new Animal($name, $gender, $breed, null, $id);
+        $new_animal = new Animal($name, $gender, $breed, $date_admitted, $id);
         array_push($animals, $new_animal);
       }
       return $animals;
@@ -51,6 +52,22 @@
     function getId()
     {
         return $this->id;
+    }
+    function getName()
+    {
+        return $this->name;
+    }
+    function getBreed()
+    {
+        return $this->breed;
+    }
+    function getGender()
+    {
+        return $this->gender;
+    }
+    function getDate()
+    {
+        return $this->date_admitted;
     }
     static function find($search_id)
     {

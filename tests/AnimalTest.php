@@ -26,9 +26,9 @@
     }
     function test_getAll()
     {
-      $test_animal = new Animal("Rover", "Male", "Dog");
+      $test_animal = new Animal("Rover", "Male", "Dog", null);
       $executed = $test_animal->save();
-      $test_animal2 = new Animal("Cindy", "Female", "Cat");
+      $test_animal2 = new Animal("Cindy", "Female", "Cat", null);
       $executed2 = $test_animal2->save();
 
       $result = Animal::getALL();
